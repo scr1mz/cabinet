@@ -1,0 +1,32 @@
+.manager-orders{
+  @media (min-width: 769px){
+    display: flex;
+  }
+
+  &__filter-block{
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 769px){
+      position: fixed;
+      width: 25em;
+    }
+
+    //Верхний отступ у дочерних элементов фильтров
+    & *:not(:first-child):not(.sort-button) {
+      margin-top: 1em;
+    }
+
+    .sort-button:not(:last-child){
+      margin-right: 5px;
+    }
+
+  }
+
+  &__orders-block{
+    @media (min-width: 769px){
+      flex: 1;
+      margin-left: 24em;
+    }
+  }
+}
+
